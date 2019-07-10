@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 
-export default class CardList extends Component {
+export default class NewGame extends Component {
+
 
   render(){
     return (
