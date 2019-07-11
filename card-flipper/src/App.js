@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
-import './App.css';
 import MainMenu from './containers/MainMenu'
 
 export default class App extends Component {

@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { Card } from 'semantic-ui-react'
-import ReactCardFlip from 'react-card-flip';
+
+
 
 export default class ShowCard extends Component {
   constructor(){
@@ -9,6 +10,7 @@ export default class ShowCard extends Component {
       isFlipped: false
     }
   }
+
 
   handleCardFlip = () => {
     this.setState(prevState => {
@@ -19,11 +21,9 @@ export default class ShowCard extends Component {
 
   render() {
     return (
-      // <ReactCardFlip flipped={this.state.isFlipped} flipDirection="vertical">
-        <Card >
+        <Card>
           <img id={this.props.index} className="images" src={this.state.isFlipped? this.props.frontPic : this.props.backPic} alt="OH NO" onClick={this.handleCardFlip}/>
         </Card>
-      // </ReactCardFlip>
     )
   }
 }

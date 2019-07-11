@@ -40,3 +40,12 @@ code {
         color: #069;
         /* border-right: 1px solid #ccc;  */
       }
+
+
+
+.click-div {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 5%
+}
