@@ -12,10 +12,23 @@ import g from '../components/images/milBike.jpeg'
 import h from '../components/images/monkey.jpeg'
 import i from '../components/images/theModel.jpeg'
 import j from '../components/images/vForVictory.png'
+import flatiron from '../components/images/flatiron.png'
 
 const cardImages = [a, b, c, d, e, f, g, h, i, j]
 
 export default class CardList extends Component {
+  // constructor(){
+  //   super()
+  //   this.state = {
+  //     flipped: false
+  //   }
+  // }
+  //
+  // handleCardFlip = () => {
+  //   this.setState(prevState => {
+  //     return {flipped: !prevState.flipped}
+  //   })
+  // }
 
  generateCards= () => {
     let gameCards = []
@@ -33,7 +46,7 @@ export default class CardList extends Component {
       <div>
         <Card.Group itemsPerRow={5}>
           {this.generateCards().map((src, index)=> {
-            return <ShowCard key={index} image={src} />
+            return <ShowCard key={index} id={index} frontPic={src} backPic={flatiron}/>
           })}
         </Card.Group>
       </div>
