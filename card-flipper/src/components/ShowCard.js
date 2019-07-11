@@ -8,7 +8,7 @@ export default class ShowCard extends Component {
   render() {
     return (
         <Card >
-          <img src={this.props.image} alt="OH NO"/>
+          <img className="images" src={this.props.image} alt="OH NO"/>
         </Card>
     )
   }
