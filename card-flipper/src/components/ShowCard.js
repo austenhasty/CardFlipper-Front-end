@@ -7,11 +7,9 @@ export default class ShowCard extends Component {
 
   render() {
     return (
-      <div>
         <Card >
           <img src={this.props.image} alt="OH NO"/>
         </Card>
-      </div>
     )
   }
 }
