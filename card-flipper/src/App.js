@@ -1,8 +1,23 @@
-import React from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import MainMenu from './containers/MainMenu'
 
-function App() {
+export default class App extends Component {
+  // constructor() {
+  //   super()
+  //   this.state = {
+  //     flipped: false
+  //   }
+  // }
+
+  // handleCardFlip = () => {
+  //   this.setState({
+  //     flipped: true
+  //   })
+  // }
+
+  render() {
   return (
     <div className="App">
       <header className="App-header">
@@ -10,17 +25,10 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+        <MainMenu />
       </header>
     </div>
   );
 }
-
-export default App;
+}
