@@ -6,9 +6,9 @@ export default class MainMenu extends Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         <PlayGame />
-      </div>
+      </React.Fragment>
     )
   }
 }
