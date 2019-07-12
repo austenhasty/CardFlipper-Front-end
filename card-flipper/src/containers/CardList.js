@@ -3,7 +3,8 @@ import { Card } from 'semantic-ui-react'
 import NewGame from '../components/NewGame'
 import ShowCard from '../components/ShowCard'
 import ShowClicks from '../components/ShowClicks'
-import Modal from './Modal'
+import WinModal from './WinModal'
+import LoseModal from './LoseModal'
 import a from '../components/images/ak.jpg'
 import b from '../components/images/aTrain.jpeg'
 import c from '../components/images/cTown.jpeg'
@@ -25,7 +26,8 @@ export default class CardList extends Component {
     this.state = {
       clicks: 10,
       cardsArray:[],
-      showModal: false
+      showWinModal: false,
+      showLoseModal: false
     }
   }
 
@@ -61,19 +63,26 @@ export default class CardList extends Component {
     // return deck
   }
 
-  toggleModal= () => {
+  toggleWinModal= () => {
     this.setState(prevState => {
-      return {showModal: !prevState.showModal}
+      return {showWinModal: !prevState.showWinModal}
+    })
+  }
+
+  toggleLoseModal= () => {
+    this.setState(prevState => {
+      return {showLoseModal: !prevState.showLoseModal}
     })
   }
 
   render(){
     return (
       <React.Fragment>
-        <input type="submit" onClick={this.toggleModal} value="Win" />
-        <input type="submit" onClick={this.toggleModal} value="Loss"/>
-        <Modal showModal={this.state.showModal} toggleModal={this.toggleModal}/>
-          <div onClick={this.handleClicks}>
+        <input type="submit" onClick={this.toggleWinModal} value="Win" />
+        <input type="submit" onClick={this.toggleLoseModal} value="Loss"/>
+        <WinModal showWinModal={this.state.showWinModal} toggleWinModal={this.toggleWinModal}/>
+        <LoseModal showLoseModal={this.state.showLoseModal} toggleLoseModal={this.toggleLoseModal} />
+        <div onClick={this.handleClicks}>
             {this.state.clicks === 0 ? window.alert("I'm sorry, but you're a LOSER"):null}
             <ShowClicks clicks={this.state.clicks}/>
             <Card.Group itemsPerRow={5}>
