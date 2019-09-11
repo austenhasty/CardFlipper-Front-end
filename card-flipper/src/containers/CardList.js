@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import { Card } from 'semantic-ui-react'
-import NewGame from '../components/NewGame'
 import ShowCard from '../components/ShowCard'
 import ShowClicks from '../components/ShowClicks'
 import WinModal from './WinModal'
